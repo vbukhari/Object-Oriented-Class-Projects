@@ -75,7 +75,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="aRandomNumberGenerator.h" />
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RandomNumberGenerator.rc" />
