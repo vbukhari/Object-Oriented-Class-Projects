@@ -7,10 +7,8 @@ using namespace std;
 class aRandomNumberGenerator {
 
 	public:
-		//Constructor - seeding random number generator
-		/*aRandomNumberGenerator() {
-			srand(time(NULL));
-		}*/
+		//Constructor - seeding random number generator and setting low and high
+
 		aRandomNumberGenerator(int l, int h){
 			setLow(l);
 			setHigh(h);
@@ -42,6 +40,7 @@ class aRandomNumberGenerator {
 class Tracker {
 
 	public:
+		//Using this constructor, initializing count array
 		Tracker() {
 			for (int i = 0; i <= 8; i++) {
 				count[i] = 0;
