@@ -4,26 +4,24 @@
 
 using namespace std;
 
+void setLow(int);
+void setHigh(int );
+int generate();
+void trackInt(int ); 
+int getCount(int );
+void printHistogram();
+
 int main() {
 
-cout << "hello" << endl;
+	Tracker t;
+	aRandomNumberGenerator r(1,9);
 
-aRandomNumberGenerator r;
-Tracker t;
+	for (int i = 0; i < 9000; i++) {	
+		int randomNumber = r.generate();
+		t.trackInt(randomNumber);
+	}
+	cout << endl;
+	t.printHistogram();
 
-r.setLow(1);
-r.setHigh(9);
-
-for (int i = 0; i < 20; i++) {
-
-int randomNumber = r.generate();
-
-t.trackInt(randomNumber);
-
-cout << randomNumber << " ";
-
-}
-
-cout << endl;
-return 0;
+	return 0;
 }
