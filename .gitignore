@@ -37,3 +37,6 @@ $tf*/
 *.lai
 *.la
 *.a
+*.out
+.DS_Store
+*.gch
