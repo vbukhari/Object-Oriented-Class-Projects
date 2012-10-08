@@ -7,23 +7,24 @@ using namespace std;
 class aRandomNumberGenerator {
 
 	public:
-		//Constructor - seeding random number generator and setting low and high
-
+		// constructor: sets the low, high and seeds rand
 		aRandomNumberGenerator(int l, int h){
-			setLow(l);
-			setHigh(h);
+			setRange(l, h);
+			// seed rand with the current timestamp
 			srand(time(NULL));
-		//	cout << time(NULL);
 		}
-		//the function set Highest instantiated number
 		void setHigh(int h) {
 			high = h;
 		}
 		void setLow(int l){
 			low = l;
 		}
-		//the function generate random number b/w 1 to 9
-		int generate(){
+		void setRange(int l, int h) {
+			setLow(l);
+			setHigh(h);
+		}
+		// generate random numbers between low and high
+		int aRandomNumberGenerator::generate(){
 
 			int mod = (high - low) +1;
 			int num = (rand() % mod);
@@ -57,8 +58,8 @@ class Tracker {
 		// the function print out histogram along with number of time random number generated.
 		void printHistogram(){
 			cout <<"Number\t"<< "Appears\t\t" << "Histogram\n"<<endl;
-			for(int i=1; i<=9; i++){
-				cout << i <<":\t"<< getCount(i)<< "/100 \t";
+			for(int i=1; i < 9; i++){
+				cout << i <<":\t"<< getCount(i)<< "\t\t";
 				for(int j=1; j<=(getCount(i)/100); j++){
 					cout <<"X";
 				}
@@ -66,5 +67,5 @@ class Tracker {
 			}
 		}
 	private:
-		int count[8];
+		int count[9];
 };

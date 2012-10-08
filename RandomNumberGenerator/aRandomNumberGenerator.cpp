@@ -4,13 +4,6 @@
 
 using namespace std;
 
-void setLow(int);
-void setHigh(int );
-int generate();
-void trackInt(int ); 
-int getCount(int );
-void printHistogram();
-
 int main() {
 
 	Tracker t;
