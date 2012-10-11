@@ -1,3 +1,9 @@
+/*
+Authors: Vasim Bukhari & Luqmaan Dawoodjee
+Project: aRandomNumber generator 
+*/
+
+
 #include <iostream>
 #include <string>
 #include "aRandomNumberGenerator.h"
