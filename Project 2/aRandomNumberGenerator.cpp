@@ -26,21 +26,21 @@ int aRandomNumberGenerator::aRandomNumberGenerator::generate(){
 	return num + 1;
 }
 //Using this constructor, initializing count array
-Tracker::Tracker() {
+Histogram::Histogram() {
 	for (int i = 0; i <= 8; i++) {
 		count[i] = 0;
 	}
 }
 // the function counts repeated random number
-void Tracker::trackInt(int n) {
+void Histogram::trackInt(int n) {
 	count[n - 1]++;
 };
 // the function returns the number of time the random number has generated
-int Tracker::getCount(int n) {
+int Histogram::getCount(int n) {
 	return count[n-1];
 }
 // the function print out histogram along with number of time random number generated.
-void Tracker::printHistogram(){
+void Histogram::printHistogram(){
 	cout <<"Number\t"<< "Appears\t\t" << "Histogram\n"<<endl;
 	for(int i=1; i < 9; i++){
 		cout << i <<":\t"<< getCount(i)<< "\t\t";
