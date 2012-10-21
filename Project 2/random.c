@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "aRandomNumberGenerator.h"
+#include "Histogram.h"
 
 using namespace std;
 
