@@ -9,3 +9,4 @@ aCoin::aCoin(void)
 aCoin::~aCoin(void)
 {
 }
+
