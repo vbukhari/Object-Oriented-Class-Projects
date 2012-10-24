@@ -21,12 +21,24 @@
     <ClInclude Include="aRandomNumberGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="aDie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aCoin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aRandomNumberGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Histogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aDie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="aCoin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
