@@ -13,6 +13,7 @@ class aRandomNumberGenerator {
 		void setHigh(int); 
 		void setLow(int);
 		void setRange(int, int);
+		int aRandomNumberGenerator::getHight();
 		// generate random numbers between low and high
 		int aRandomNumberGenerator::generate();
 	private:

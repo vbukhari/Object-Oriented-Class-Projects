@@ -13,7 +13,7 @@ using namespace std;
 int main() {
 
 	Tracker t;
-	aRandomNumberGenerator r(5,9);
+	aRandomNumberGenerator r(9,15);
 
 	for (int i = 0; i < 9000; i++) {	
 		int randomNumber = r.generate();
@@ -30,7 +30,9 @@ int main() {
 		// seed rand with the current timestamp
 		srand((unsigned int)time(NULL));
 	}
-		
+	int aRandomNumberGenerator::getHight(){
+		return this->high;
+	}
 	void aRandomNumberGenerator::setHigh(int h) {
 		high = h;
 	}
@@ -43,9 +45,13 @@ int main() {
 	}
 	// generate random numbers between low and high
 	int aRandomNumberGenerator::generate(){
-		int mod = (high - low) +1;
-		int num = (rand() % mod);
-		return num + 1;
+		//int mod = (high - low) +1;
+		int num;
+		num = (rand() % high)+1;
+		if(num<low){
+			num+=low;
+		}
+		return num;
 	}
 
 
@@ -67,7 +73,7 @@ int main() {
 	// the function print out histogram along with number of time random number generated.
 	void Tracker::printHistogram(){
 		cout <<"Number\t"<< "Appears\t\t" << "Histogram\n"<<endl;
-		for(int i=1; i <= 9; i++){
+		for(int i=1; i <= 15; i++){
 			cout << i <<":\t"<< getCount(i)<< "\t\t";
 			for(int j=1; j<=(getCount(i)/100); j++){
 				cout <<"X";

@@ -34,8 +34,8 @@ void aHistogram::trackInt(int n) {
 	count[n - 1]++;
 };*/
 // the function returns the number of time the random number has generated
-int aHistogram::getCount(int n) {
-	return count[n-1];
+int aHistogram::getCount(int rnum) {
+	return count[rnum-1];
 }
 // the function print out histogram along with number of time random number generated.
 void aHistogram::printHistogram(){
