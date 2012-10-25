@@ -23,10 +23,16 @@ aHistogram::aHistogram() {
 void aHistogram::setRange(int lw, int hg){
 	aRandomNumberGenerator::aRandomNumberGenerator(lw, hg);
 }
-// the function counts repeated random number
+void aHistogram::update(int number){
+	count[number - 1]++;
+}
+void aHistogram::clear(){
+
+}
+/* the function counts repeated random number
 void aHistogram::trackInt(int n) {
 	count[n - 1]++;
-};
+};*/
 // the function returns the number of time the random number has generated
 int aHistogram::getCount(int n) {
 	return count[n-1];
