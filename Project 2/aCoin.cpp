@@ -1,16 +1,7 @@
 #include "aCoin.h"
-#include "aRandomNumberGenerator.h"
-#include "aHistogram.h"
 
-aCoin::aCoin(void)
-{
-}
-
-
-aCoin::~aCoin(void)
-{
-
-}
-int aCoin::flip(){
-
-}
+aCoin::aCoin() : aRandomNumberGenerator(1,2) {
+};
+int aCoin::Flip() {
+	return  aRandomNumberGenerator::generate();
+};

@@ -1,10 +1,7 @@
-#pragma once
-class aDie
-{
+#include "aRandomNumberGenerator.h"
+
+class aDie : public aRandomNumberGenerator {
 public:
-	aDie(void);
-	~aDie(void);
-
-	int aDie::throws();
+	aDie();
+	int Throw();
 };
-

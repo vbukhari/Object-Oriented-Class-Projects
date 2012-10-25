@@ -7,19 +7,15 @@
 using namespace std;
 
 //Using this constructor, initializing count array
-aHistogram::aHistogram(void)
+aHistogram::aHistogram()
 {
-}
-
-aHistogram::~aHistogram(void)
-{
-}
-aHistogram::aHistogram() {
 	for (int i = 0; i <= 8; i++) {
 		count[i] = 0;
 	}
 }
-
+aHistogram::~aHistogram()
+{
+}
 void aHistogram::setRange(int lw, int hg){
 	aRandomNumberGenerator::aRandomNumberGenerator(lw, hg);
 }

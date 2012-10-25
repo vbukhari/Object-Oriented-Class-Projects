@@ -1,9 +1,7 @@
-#pragma once
-class aCoin
-{
-public:
-	aCoin(void);
-	~aCoin(void);
-	int aCoin::flip();
-};
+#include "aRandomNumberGenerator.h"
 
+class aCoin : public aRandomNumberGenerator {
+public:
+	aCoin();
+	int Flip();
+};

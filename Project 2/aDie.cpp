@@ -1,15 +1,7 @@
 #include "aDie.h"
-#include "aRandomNumberGenerator.h"
-#include "aHistogram.h"
 
-aDie::aDie(void)
-{
-}
-
-
-aDie::~aDie(void)
-{
-}
-int aDie::throws(){
-
-}
+aDie::aDie() : aRandomNumberGenerator(1,6) {
+};
+int aDie::Throw() {
+	return  aRandomNumberGenerator::generate();
+};
