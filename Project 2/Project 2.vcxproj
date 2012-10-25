@@ -63,13 +63,13 @@
     <ClInclude Include="aCoin.h" />
     <ClInclude Include="aDie.h" />
     <ClInclude Include="aRandomNumberGenerator.h" />
-    <ClInclude Include="Histogram.h" />
+    <ClInclude Include="aHistogram.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aCoin.cpp" />
     <ClCompile Include="aDie.cpp" />
     <ClCompile Include="aRandomNumberGenerator.cpp" />
-    <ClCompile Include="Histogram.cpp" />
+    <ClCompile Include="aHistogram.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

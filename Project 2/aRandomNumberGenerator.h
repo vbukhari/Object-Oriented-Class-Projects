@@ -2,11 +2,18 @@ class aRandomNumberGenerator {
 
 	public:
 		// constructor: sets the low, high and seeds rand
-		aRandomNumberGenerator(int l, int h);
-		void setHigh(int h) ;
-		void setLow(int l);
-		void setRange(int l, int h) ;
-		int generate();
+		aRandomNumberGenerator(void);
+		~aRandomNumberGenerator(void);
+
+		aRandomNumberGenerator::aRandomNumberGenerator(int, int);
+
+		void aRandomNumberGenerator::setHighNum(int);
+		int aRandomNumberGenerator::getHighNum();
+		void aRandomNumberGenerator::setLowNum(int);
+		int aRandomNumberGenerator::getLowNum();
+
+
+		int aRandomNumberGenerator::generate();
 		 
 	private:
 		int low;
