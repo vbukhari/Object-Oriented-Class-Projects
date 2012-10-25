@@ -13,14 +13,14 @@ using namespace std;
 int main() {
 
 	Tracker t;
-	aRandomNumberGenerator r(9,15);
+	aRandomNumberGenerator r(1,5);
 
 	for (int i = 0; i < 9000; i++) {	
 		int randomNumber = r.generate();
 		t.trackInt(randomNumber);
 	}
 	cout << endl;
-	t.printHistogram();
+	t.printHistogram(5,9);
 
 	return 0;
 }
@@ -71,9 +71,10 @@ int main() {
 		return count[n-1];
 	}
 	// the function print out histogram along with number of time random number generated.
-	void Tracker::printHistogram(){
+	void Tracker::printHistogram(int low, int high){
 		cout <<"Number\t"<< "Appears\t\t" << "Histogram\n"<<endl;
-		for(int i=1; i <= 15; i++){
+		int i;
+		for(i=low; i <=high; i++){
 			cout << i <<":\t"<< getCount(i)<< "\t\t";
 			for(int j=1; j<=(getCount(i)/100); j++){
 				cout <<"X";

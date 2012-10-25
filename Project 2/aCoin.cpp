@@ -9,6 +9,7 @@ aCoin::aCoin(void)
 
 aCoin::~aCoin(void)
 {
+
 }
 int aCoin::flip(){
 

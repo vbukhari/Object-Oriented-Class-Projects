@@ -33,7 +33,7 @@ class Tracker {
 		// the function returns the number of time the random number has generated
 		int getCount(int );
 		// the function print out histogram along with number of time random number generated.
-		void printHistogram();
+		void printHistogram(int, int);
 	private:
 		int count[9];
 };

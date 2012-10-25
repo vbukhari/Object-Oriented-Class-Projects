@@ -34,7 +34,6 @@ int aRandomNumberGenerator::getLowNum() {
 
 int aRandomNumberGenerator::aRandomNumberGenerator::generate(){
 
-	//int mod = (high - low) +1;
 	int num;
 	num = (rand() % high)+1;
 	if(num<low){
