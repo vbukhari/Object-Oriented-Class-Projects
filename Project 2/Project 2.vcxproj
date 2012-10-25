@@ -70,6 +70,7 @@
     <ClCompile Include="aDie.cpp" />
     <ClCompile Include="aRandomNumberGenerator.cpp" />
     <ClCompile Include="aHistogram.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
