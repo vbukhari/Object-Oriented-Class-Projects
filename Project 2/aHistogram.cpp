@@ -1,46 +1,35 @@
-#include <iostream>
-#include <string>
-#include <time.h>
 #include "aHistogram.h"
-#include "aRandomNumberGenerator.h"
 
-using namespace std;
+aHistogram::aHistogram() {};
+/* the vectors do not need to be destructed, see http://stackoverflow.com/questions/1591018/stdvectorclear-in-constructor-and-destructor */
+aHistogram::~aHistogram() {};
 
-//Using this constructor, initializing count array
-aHistogram::aHistogram()
-{
-	for (int i = 0; i <= 8; i++) {
-		count[i] = 0;
+void aHistogram::setRange(int low , int high) {
+
+	offset = low;
+
+	if (!count.empty())
+		clear();
+
+	// set the count for all the numbers to 0
+	for (int i = low; i <= high; i++) {
+		count.push_back(0);
 	}
-}
-aHistogram::~aHistogram()
-{
-}
-void aHistogram::setRange(int lw, int hg){
-	aRandomNumberGenerator::aRandomNumberGenerator(lw, hg);
-}
-void aHistogram::update(int number){
-	count[number - 1]++;
-}
-void aHistogram::clear(){
 
-}
-/* the function counts repeated random number
-void aHistogram::trackInt(int n) {
-	count[n - 1]++;
-};*/
-// the function returns the number of time the random number has generated
-int aHistogram::getCount(int rnum) {
-	return count[rnum-1];
-}
-// the function print out histogram along with number of time random number generated.
-void aHistogram::printHistogram(){
-	cout <<"Number\t"<< "Appears\t\t" << "Histogram\n"<<endl;
-	for(int i=1; i < 9; i++){
-		cout << i <<":\t"<< getCount(i)<< "\t\t";
-		for(int j=1; j<=(getCount(i)/100); j++){
-			cout <<"X";
-		}
-		cout << endl;
+};
+
+void aHistogram::update(int n) {
+	count.at(n - offset) += 1;
+};
+
+void aHistogram::clear() {
+	count.clear();
+};
+
+void aHistogram::printHistogram() {
+
+	for (int i = 0; i < count.size() ; i++) {
+		cout << count.at(i);
 	}
-}
+
+};

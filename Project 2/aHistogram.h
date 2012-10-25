@@ -1,20 +1,22 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
 class aHistogram {
 
-	public:
-		//Using this constructor, initializing count array
-		aHistogram(void);
-		~aHistogram(void);
+public:
+	aHistogram();
+	~aHistogram();
 
-		void aHistogram::setRange(int, int);
-		void aHistogram::update(int);
-		void aHistogram::clear();
-		// the function counts repeated random number
-		//void trackInt(int ) ;
-		// the function returns the number of time the random number has generated
-		int getCount(int ) ;
-		// the function print out histogram along with number of time random number generated.
-		void printHistogram();
-	private:
-		int count[9];
+	void setRange(int low , int high);
+	void update(int n);
+	void clear();
+	void printHistogram();
 
+private:
+	// stores the count of the numbers between range low and high
+	vector<int> count;
+	// stores value of low, so the true value of a number at position 0 is actually 0 + offset (aka low)
+	int offset;
 };
