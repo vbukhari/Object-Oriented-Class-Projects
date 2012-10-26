@@ -21,6 +21,18 @@ int main() {
 
 	h.setRange (4, 7);
 	h.update(4);
+	h.update(4);
+	h.update(4);
+	h.update(4);
+	h.update(4);
+	h.update(7);
+	h.update(7);
+	h.update(7);
+	h.update(7);
+	h.update(7);
+	h.update(7);
+	h.update(7);
+	h.update(7);
 	h.update(7);
 	h.update(7);
 	h.printHistogram();

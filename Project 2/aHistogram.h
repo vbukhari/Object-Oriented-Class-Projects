@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -19,4 +20,8 @@ private:
 	vector<int> count;
 	// stores value of low, so the true value of a number at position 0 is actually 0 + offset (aka low)
 	int offset;
+	string getXes (int times);
+	int getDivisor();
+	int gcd(int x, int y);
+	int vectorGCD(vector <int>);
 };
