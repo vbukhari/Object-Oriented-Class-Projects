@@ -5,33 +5,38 @@ aHistogram::aHistogram() {};
 aHistogram::~aHistogram() {};
 
 void aHistogram::setRange(int low , int high) {
+
 	offset = low;
-	if (!count.empty())
+	if (!occurrences.empty())
 		clear();
-	// set the count for all the numbers to 0
+
 	for (int i = low; i <= high; i++)
-		count.push_back(0);
+		occurrences.push_back(0);
 };
 
 void aHistogram::update(int n) {
-	count.at(n - offset) += 1;
+	occurrences.at(n - offset) += 1;
 };
 
 void aHistogram::clear() {
 	offset = 0;
-	count.clear();
+	occurrences.clear();
 };
 
 void aHistogram::printHistogram() {
 
 	int divisor = getDivisor();
 
-	for (int i = 0; i < (int) count.size() ; i++) {
-		cout << (i + offset) << ": \t" <<  count.at(i) << "\t" << getXes( count.at(i) / divisor )  << endl;
+	for (int i = 0; i < (int) occurrences.size() ; i++) {
+		cout << (i + offset) << ": \t" <<  occurrences.at(i) << " " << count(i) << "\t" << getXes( occurrences.at(i) / divisor )  << endl;
 	}
+
 };
 
-/* returns a string with times number of "X"es */
+int aHistogram::count(int n) {
+	return  occurrences.at(n) / getDivisor();
+}
+
 string aHistogram::getXes(int times) {
 	string out = "";
 	for (int i = 0; i < times; i++)
@@ -39,18 +44,12 @@ string aHistogram::getXes(int times) {
 	return out;
 }
 
-
-
-/* returns an int that can be used to divide the number of occurences of each number into a nicer number of Xes */
 int aHistogram::getDivisor() {
+	int divisor = vectorGCD(occurrences);
 
-	int divisor = vectorGCD(count);
-
-	while ( ( *min_element(count.begin(),  count.end()) / divisor ) > 10 ) {
+	while ( ( *min_element(occurrences.begin(),  occurrences.end()) / divisor ) > 10 ) {
 		divisor *= 10;
 	}
-
-	// cout << "THE DIVISOR IS " << divisor;
 
 	return divisor;
 }
