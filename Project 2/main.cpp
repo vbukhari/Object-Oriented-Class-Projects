@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <time.h>
+
 #include "aDie.h"
 #include "aCoin.h"
 #include "aHistogram.h"
@@ -11,34 +12,27 @@ using namespace std;
 int main() {
 
 	aHistogram h;
-	h.setRange (1, 3);
-	h.update(1);
-	h.update(1);
-	h.update(2);
-	h.printHistogram();
-	
-	cout << endl << endl;
+	h.setRange (1, 6);
 
-	h.setRange (4, 7);
-	h.update(4);
-	h.update(4);
-	h.update(4);
-	h.update(4);
-	h.update(4);
-	h.update(7);
-	h.update(7);
-	h.update(7);
-	h.update(7);
-	h.update(7);
-	h.update(7);
-	h.update(7);
-	h.update(7);
-	h.update(7);
-	h.update(7);
+	aDie d;
+	for (int i = 0; i < 6000; i++) {
+		h.update( d.throwDie() );
+	}
 	h.printHistogram();
 
+	cout << endl << "HELLO COIN!" << endl;
+
+	h.clear();
+	h.setRange(1,2);
+
+	aCoin c;
+	for (int i = 0; i < 6000; i++) {
+		h.update( c.flipCoin() );
+	}
+	h.printHistogram();
 
 	// http://stackoverflow.com/questions/2529617/how-to-stop-c-console-application-from-exiting-immediately
 	getchar();
 	return 0;
 }
+

@@ -9,5 +9,5 @@
 class aCoin : public aRandomNumberGenerator {
 public:
 	aCoin();
-	int Flip();
+	int flipCoin();
 };

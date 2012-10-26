@@ -2,6 +2,6 @@
 
 aCoin::aCoin() : aRandomNumberGenerator(1,2) {
 };
-int aCoin::Flip() {
+int aCoin::flipCoin() {
 	return  aRandomNumberGenerator::generate();
 };

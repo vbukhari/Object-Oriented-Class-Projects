@@ -2,6 +2,6 @@
 
 aDie::aDie() : aRandomNumberGenerator(1,6) {
 };
-int aDie::Throw() {
+int aDie::throwDie() {
 	return  aRandomNumberGenerator::generate();
 };

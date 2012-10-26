@@ -9,5 +9,5 @@
 class aDie : public aRandomNumberGenerator {
 public:
 	aDie();
-	int Throw();
+	int throwDie();
 };
