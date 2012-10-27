@@ -28,7 +28,7 @@ void aHistogram::printHistogram() {
 	int divisor = getDivisor();
 
 	for (int i = 0; i < (int) occurrences.size() ; i++) {
-		cout << (i + offset) << ": \t" <<  occurrences.at(i) << " " << count(i) << "\t" << getXes( occurrences.at(i) / divisor )  << endl;
+		cout << (i + offset) << ": \t" <<  occurrences.at(i) << " " << "\t" << getXes( occurrences.at(i) / divisor )  << endl;
 	}
 
 };
