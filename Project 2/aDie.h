@@ -8,6 +8,7 @@
 
 class aDie : public aRandomNumberGenerator {
 public:
-	aDie();
+	aDie::aDie();
+	aDie::~aDie();
 	int throwDie();
 };

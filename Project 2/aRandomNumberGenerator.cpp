@@ -1,9 +1,14 @@
 #include "aRandomNumberGenerator.h"
 
 using namespace std;
-
+aRandomNumberGenerator::aRandomNumberGenerator(){};
+aRandomNumberGenerator::~aRandomNumberGenerator(){};
 aRandomNumberGenerator::aRandomNumberGenerator(int l, int h){
 	setRange(l, h);
+	srand((unsigned int)time(NULL));
+}
+aRandomNumberGenerator::aRandomNumberGenerator(){
+	/* Dont forget to set the range ! */
 	srand((unsigned int)time(NULL));
 }
 int aRandomNumberGenerator::getHigh(){

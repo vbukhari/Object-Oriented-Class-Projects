@@ -8,6 +8,7 @@
 
 class aCoin : public aRandomNumberGenerator {
 public:
-	aCoin();
+	aCoin::aCoin();
+	aCoin::~aCoin();
 	int flipCoin();
 };

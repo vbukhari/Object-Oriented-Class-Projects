@@ -1,0 +1,5 @@
+[33mcommit f050b5452cc62149e255e71c204a4dec3a1d7248[m
+Author: Luqmaan <intern@usf-wifi-235-135.laptops.usf.edu>
+Date:   Tue Oct 30 12:10:58 2012 -0400
+
+    Updated aRandomNumberGenerator to accept initilizatoin without paramaters

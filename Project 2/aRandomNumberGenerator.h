@@ -10,8 +10,11 @@ using namespace std;
 class aRandomNumberGenerator {
 
 public:
-	// constructor: sets the low, high and seeds rand
-	aRandomNumberGenerator(int, int);
+	/* constructors, the first implies that range will be set later */
+	aRandomNumberGenerator::aRandomNumberGenerator();
+	aRandomNumberGenerator::~aRandomNumberGenerator();
+
+	aRandomNumberGenerator(int l, int h);
 
 	void setHigh(int h); 
 	void setLow(int l);
@@ -29,3 +32,5 @@ private:
 };
 
 #endif
+
+
