@@ -23,7 +23,7 @@ void aHistogram::clear() {
 	occurrences.clear();
 };
 
-void aHistogram::printHistogram() {
+void aHistogram::printHistogram() const {
 
 	int divisor = getDivisor();
 
@@ -37,14 +37,14 @@ int aHistogram::count(int n) {
 	return  occurrences.at(n) / getDivisor();
 }
 
-string aHistogram::getXes(int times) {
+string aHistogram::getXes(int times) const {
 	string out = "";
 	for (int i = 0; i < times; i++)
 		out += "X";
 	return out;
 }
 
-int aHistogram::getDivisor() {
+int aHistogram::getDivisor() const {
 	int divisor = vectorGCD(occurrences);
 
 	while ( ( *min_element(occurrences.begin(),  occurrences.end()) / divisor ) > 10 ) {
@@ -54,7 +54,7 @@ int aHistogram::getDivisor() {
 	return divisor;
 }
 
-int aHistogram::vectorGCD(vector<int> numbers) {
+int aHistogram::vectorGCD(vector<int> numbers) const {
 
 	int g = gcd(numbers.at(0), numbers.at(1));
 
@@ -67,7 +67,7 @@ int aHistogram::vectorGCD(vector<int> numbers) {
 	return g;
 }
 
-int aHistogram::gcd(int x, int y) {
+int aHistogram::gcd(int x, int y) const {
 
 	if (x == 0)
 		return y;

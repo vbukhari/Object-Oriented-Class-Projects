@@ -18,11 +18,11 @@ public:
 	void setLow(int l);
 	void setRange(int l, int h);
 	/* lol */
-	int getHigh();
+	int getHighNumber() const;
 	/* like flo rida */
-	int getLow();
+	int getLowNumber() const;
 	/* generate random numbers between low and high */
-	int generate();
+	int generate() const;
 
 private:
 	int low;
